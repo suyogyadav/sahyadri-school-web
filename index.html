@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .acadmicsCard:hover {
+        box-shadow: 0 0.5rem 1rem #b0575a;
+      }
+      @media (min-width: 768px) {
+        .carousel-inner {
+          display: flex;
+        }
+        .carousel-item {
+          margin-right: 0;
+          flex: 0 0 33.333333%;
+          display: block;
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let parentReviewCarousel = document.querySelector(
+          "#parentReviewCarousel"
+        );
+        let facilitiesCarousel = document.querySelector("#facilitiesCarousel");
+        let achievementsCarousel = document.querySelector(
+          "#achievementsCarousel"
+        );
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          let carousel = new bootstrap.Carousel(parentReviewCarousel, {
+            interval: false,
+            wrap: false,
+          });
+
+          let carouselWidth =
+            document.querySelector(".carousel-inner").scrollWidth;
+          let cardWidth = document.querySelector(".carousel-item").offsetWidth;
+          let scrollPosition = 0;
+
+          document
+            .querySelector("#parent-carousel-control-next")
+            .addEventListener("click", function () {
+              if (scrollPosition < carouselWidth - cardWidth * 3) {
+                scrollPosition += cardWidth;
+                document
+                  .querySelector("#parentReviewCarousel .carousel-inner")
+                  .scroll({ left: scrollPosition, behavior: "smooth" });
+              }
+            });
+
+          document
+            .querySelector("#parent-carousel-control-prev")
+            .addEventListener("click", function () {
+              if (scrollPosition > 0) {
+                scrollPosition -= cardWidth;
+                document
+                  .querySelector("#parentReviewCarousel .carousel-inner")
+                  .scroll({ left: scrollPosition, behavior: "smooth" });
+              }
+            });
+        } else {
+          parentReviewCarousel.classList.add("slide");
+        }
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          let carousel = new bootstrap.Carousel(facilitiesCarousel, {
+            interval: false,
+            wrap: false,
+          });
+
+          let carouselWidth =
+            document.querySelector(".carousel-inner").scrollWidth;
+          let cardWidth = document.querySelector(".carousel-item").offsetWidth;
+          let scrollPosition = 0;
+
+          document
+            .querySelector("#facilities-carousel-control-next")
+            .addEventListener("click", function () {
+              if (scrollPosition < carouselWidth - cardWidth * 3) {
+                scrollPosition += cardWidth;
+                document
+                  .querySelector("#facilitiesCarousel .carousel-inner")
+                  .scroll({ left: scrollPosition, behavior: "smooth" });
+              }
+            });
+
+          document
+            .querySelector("#facilities-carousel-control-prev")
+            .addEventListener("click", function () {
+              if (scrollPosition > 0) {
+                scrollPosition -= cardWidth;
+                document
+                  .querySelector("#facilitiesCarousel .carousel-inner")
+                  .scroll({ left: scrollPosition, behavior: "smooth" });
+              }
+            });
+        } else {
+          facilitiesCarousel.classList.add("slide");
+        }
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          let carousel = new bootstrap.Carousel(achievementsCarousel, {
+            interval: false,
+            wrap: false,
+          });
+          let carouselWidth =
+            document.querySelector(".carousel-inner").scrollWidth;
+          let cardWidth = document.querySelector(".carousel-item").offsetWidth;
+          let scrollPosition = 0;
+
+          setInterval(() => {
+            scrollPosition += cardWidth;
+            document
+              .querySelector("#achievementsCarousel .carousel-inner")
+              .scroll({ left: scrollPosition, behavior: "smooth" });
+          }, 4000);
+        } else {
+          achievementsCarousel.classList.add("slide");
+        }
+      });
+    </script>
+  </head>
+  <body style="font-family: 'Roboto', sans-serif">
+    <header class="sticky-top" style="background-color: #fff">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mx-lg-5">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="../index.html"
+            style="position: absolute; bottom: -60px"
+          >
+            <img
+              src="./Assets/logo.png"
+              alt="Logo"
+              width="154"
+              height="110"
+              style="border-radius: 16px"
+            />
+          </a>
+          <a class="navbar-brand" style="visibility: hidden">logo</a>
+          <a class="navbar-brand" style="visibility: hidden">logo</a>
+          <a class="navbar-brand" style="visibility: hidden">logo</a>
+          <a class="navbar-brand" style="visibility: hidden">l</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="12"
+              viewBox="0 0 18 12"
+              fill="none"
+            >
+              <path
+                d="M1 12H17C17.55 12 18 11.55 18 11C18 10.45 17.55 10 17 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM1 7H17C17.55 7 18 6.55 18 6C18 5.45 17.55 5 17 5H1C0.45 5 0 5.45 0 6C0 6.55 0.45 7 1 7ZM0 1C0 1.55 0.45 2 1 2H17C17.55 2 18 1.55 18 1C18 0.45 17.55 0 17 0H1C0.45 0 0 0.45 0 1Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: #1e1e1e">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./index.html"
+                  style="color: #c2272d"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: #1e1e1e"
+                >
+                  Sections
+                </a>
+                <ul class="dropdown-menu" style="border: none">
+                  <li>
+                    <a class="dropdown-item" href="./kinderBoost.html"
+                      >Kinder Boost</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./primaryOne.html"
+                      >Primary 1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./primaryTwo.html"
+                      >Primary 2</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./secondary.html"
+                      >Secondary</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./aboutUs.html"
+                  style="color: #1e1e1e"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="#"
+                  style="color: #1e1e1e"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid p-0">
+      <img
+        src="./Assets/home-slider-2.png"
+        class="container-fluid p-0"
+        style="height: 70vh"
+      />
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div class="container-fluid">
+        <div
+          class="row row-cols-1 row-cols-sm-1 row-cols-md-2 align-items-center"
+          style="background: #fef4f4; border-radius: 64px"
+        >
+          <img
+            class="col p-2"
+            src="./Assets/school.jpeg"
+            alt="school"
+            style="border-radius: 64px; max-height: 456px"
+          />
+          <div class="col mt-3 mt-sm-2 p-4">
+            <div style="display: flex; align-items: center">
+              <div style="background: #c2272d; height: 40px; width: 8px"></div>
+              <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+                About Us
+              </h3>
+              <div class="m-0 ms-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="33"
+                  viewBox="0 0 40 33"
+                  fill="none"
+                >
+                  <path
+                    d="M6 14.5C8.20625 14.5 10 12.7063 10 10.5C10 8.29375 8.20625 6.5 6 6.5C3.79375 6.5 2 8.29375 2 10.5C2 12.7063 3.79375 14.5 6 14.5ZM34 14.5C36.2062 14.5 38 12.7063 38 10.5C38 8.29375 36.2062 6.5 34 6.5C31.7938 6.5 30 8.29375 30 10.5C30 12.7063 31.7938 14.5 34 14.5ZM36 16.5H32C30.9 16.5 29.9062 16.9438 29.1812 17.6625C31.7 19.0438 33.4875 21.5375 33.875 24.5H38C39.1063 24.5 40 23.6063 40 22.5V20.5C40 18.2937 38.2062 16.5 36 16.5ZM20 16.5C23.8687 16.5 27 13.3687 27 9.5C27 5.63125 23.8687 2.5 20 2.5C16.1313 2.5 13 5.63125 13 9.5C13 13.3687 16.1313 16.5 20 16.5ZM24.8 18.5H24.2812C22.9813 19.125 21.5375 19.5 20 19.5C18.4625 19.5 17.025 19.125 15.7188 18.5H15.2C11.225 18.5 8 21.725 8 25.7V27.5C8 29.1562 9.34375 30.5 11 30.5H29C30.6562 30.5 32 29.1562 32 27.5V25.7C32 21.725 28.775 18.5 24.8 18.5ZM10.8188 17.6625C10.0938 16.9438 9.1 16.5 8 16.5H4C1.79375 16.5 0 18.2937 0 20.5V22.5C0 23.6063 0.89375 24.5 2 24.5H6.11875C6.5125 21.5375 8.3 19.0438 10.8188 17.6625Z"
+                    fill="#272727"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="mt-3 mt-sm-3">
+              <p
+                style="
+                  color: #444343;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 24px;
+                "
+              >
+                At our institute, we transcend the traditional notion of a
+                school. It's a captivating realm where students and teachers
+                alike embark on a journey of shared learning. Our approach
+                extends beyond conventional textbooks, classrooms, and
+                chalkboards. We've crafted a comprehensive learning system with
+                the objective of nurturing the complete personality of each
+                child, providing exposure to a diverse array of learning
+                experiences.
+              </p>
+              <p
+                style="
+                  color: #444343;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 24px;
+                "
+              >
+                In this dynamic learning environment, we prioritize fostering a
+                sense of curiosity, critical thinking, and creativity. Our
+                institute is not just a place for academic pursuits; it's a
+                vibrant community that encourages exploration and collaboration.
+                Through innovative teaching methods and interactive learning
+                tools, we empower our students to become active participants in
+                their education.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+          Academics
+        </h3>
+        <div class="m-0 ms-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <path
+              d="M23.695 5.83331C22.5404 5.28521 21.2782 5.00085 20 5.00085C18.7219 5.00085 17.4597 5.28521 16.305 5.83331L5.15338 11.0616C3.36005 11.9016 2.89172 14.2733 3.75005 15.9116V24.1666C3.75005 24.4982 3.88174 24.8161 4.11617 25.0505C4.35059 25.2849 4.66853 25.4166 5.00005 25.4166C5.33157 25.4166 5.64951 25.2849 5.88393 25.0505C6.11835 24.8161 6.25005 24.4982 6.25005 24.1666V17.7866L16.305 22.5C17.4597 23.0481 18.7219 23.3324 20 23.3324C21.2782 23.3324 22.5404 23.0481 23.695 22.5L34.8467 17.2716C37.2734 16.135 37.2734 12.1983 34.8467 11.0616L23.695 5.83331Z"
+              fill="#272727"
+            />
+            <path
+              d="M8.33337 21.525V27.7084C8.33337 29.3884 9.17171 30.9617 10.6417 31.775C13.09 33.1334 17.0067 35 20 35C22.9934 35 26.91 33.1317 29.3584 31.7767C30.8284 30.9617 31.6667 29.3884 31.6667 27.71V21.525L24.7567 24.765C23.2698 25.469 21.6452 25.8341 20 25.8341C18.3549 25.8341 16.7303 25.469 15.2434 24.765L8.33337 21.525Z"
+              fill="#272727"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div
+          class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 align-self-center"
+        >
+          <div class="col p-4">
+            <div
+              class="d-flex flex-column align-items-center p-3 acadmicsCard"
+              style="
+                border: solid 1px #c2272d;
+                border-radius: 48px;
+                background-color: white;
+              "
+            >
+              <img
+                class="img-fluid"
+                src="./Assets/kinder-card.jpeg"
+                alt="kinderboost"
+                style="height: 275px; width: 275px; border-radius: 20px"
+              />
+              <h3 class="mt-4 text-center">Kindergarten</h3>
+              <p class="mt-3 text-center">
+                Kindergarten learning has evolved, offering kids accessible,
+                enjoyable, and memorable educational experiences.
+              </p>
+            </div>
+          </div>
+          <div class="col p-4">
+            <div
+              class="d-flex flex-column align-items-center p-3 acadmicsCard"
+              style="
+                border: solid 1px #c2272d;
+                border-radius: 48px;
+                background-color: white;
+              "
+            >
+              <img
+                class="img-fluid"
+                src="./Assets/p1-card.png"
+                alt="primaryOne"
+                style="height: 275px; width: 275px; border-radius: 20px"
+              />
+              <h3 class="mt-4 text-center">1st - 4th Grade</h3>
+              <p class="mt-3 text-center">
+                Innovative learning approaches are designed to be both
+                accessible and enjoyable for children, enhancing retention.
+              </p>
+            </div>
+          </div>
+          <div class="col p-4">
+            <div
+              class="d-flex flex-column align-items-center p-3 acadmicsCard"
+              style="
+                border: solid 1px #c2272d;
+                border-radius: 48px;
+                background-color: white;
+              "
+            >
+              <img
+                class="img-fluid"
+                src="./Assets/p2-card.jpeg"
+                alt="primaryTwo"
+                style="height: 275px; width: 275px; border-radius: 20px"
+              />
+              <h3 class="mt-4 text-center">5th - 7th Grade</h3>
+              <p class="mt-3 text-center">
+                Kids now experience learning in ways that are not only more
+                accessible and enjoyable but also significantly more memorable.
+              </p>
+            </div>
+          </div>
+          <div class="col p-4">
+            <div
+              class="d-flex flex-column align-items-center p-3 acadmicsCard"
+              style="
+                border: solid 1px #c2272d;
+                border-radius: 48px;
+                background-color: white;
+              "
+            >
+              <img
+                class="img-fluid"
+                src="./Assets/secondary-card.jpeg"
+                alt="secondary"
+                style="height: 275px; width: 275px; border-radius: 20px"
+              />
+              <h3 class="mt-4 text-center">8th - 10th Grade</h3>
+              <p class="mt-3 text-center">
+                Explore a learning experience where children effortlessly absorb
+                information through enjoyable and accessible methods.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+          Here we stand
+        </h3>
+        <div class="m-0 ms-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="33"
+            viewBox="0 0 32 33"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_67_177)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M23.6023 1.14006C23.7218 0.948247 23.8954 0.796149 24.1012 0.702984C24.3071 0.609818 24.5359 0.579767 24.7589 0.616628L30.6355 1.5972C30.9342 1.64704 31.201 1.81346 31.3772 2.05991C31.5533 2.30635 31.6244 2.61264 31.5749 2.91149L30.5966 8.79034C30.5593 9.01319 30.4567 9.21998 30.3019 9.38456C30.1471 9.54914 29.9469 9.66414 29.7268 9.71502C29.5066 9.7659 29.2763 9.75038 29.065 9.67042C28.8537 9.59046 28.6708 9.44964 28.5395 9.26577L26.9532 7.04863L18.784 12.2692C18.4357 12.4921 18.0184 12.5816 17.6093 12.5211C17.2002 12.4606 16.8267 12.2542 16.5577 11.9401L12.0023 6.61434L3.48345 10.9915C3.07911 11.1994 2.60873 11.2382 2.17579 11.0993C1.74285 10.9604 1.38281 10.6553 1.17488 10.2509C0.966952 9.84657 0.928162 9.37619 1.06705 8.94325C1.20593 8.51031 1.51111 8.15027 1.91545 7.94234L11.6412 2.94349C11.9845 2.76709 12.3774 2.71174 12.7561 2.78641C13.1349 2.86108 13.4773 3.06139 13.728 3.35491L18.1943 8.57777L24.96 4.2532L23.6412 2.40863C23.51 2.22469 23.4364 2.00602 23.4295 1.78023C23.4225 1.55445 23.4827 1.33168 23.6023 1.14006ZM8.64002 12.3629L2.00688 16.1572C1.74484 16.3069 1.52695 16.5231 1.37524 16.784C1.22354 17.0448 1.14338 17.3411 1.14288 17.6429V30.7858C1.14288 31.7321 1.91088 32.5001 2.85717 32.5001H8.64002V12.3629ZM11.4972 32.5001H19.8812V16.9298L16.112 18.8132L12.3452 12.2212C12.1549 11.886 11.8569 11.6249 11.4995 11.4806L11.4972 32.5001ZM29.1429 32.5001H22.7383V15.5012L28.3772 12.6806C28.6385 12.5501 28.9289 12.4886 29.2207 12.5019C29.5125 12.5151 29.7961 12.6028 30.0446 12.7564C30.293 12.91 30.4981 13.1246 30.6403 13.3798C30.7825 13.635 30.8572 13.9222 30.8572 14.2143V30.7858C30.8572 31.2404 30.6766 31.6765 30.3551 31.998C30.0336 32.3194 29.5975 32.5001 29.1429 32.5001Z"
+                fill="#272727"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_67_177">
+                <rect
+                  width="32"
+                  height="32"
+                  fill="white"
+                  transform="translate(0 0.5)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row align-self-center mt-4">
+          <div
+            class="col p-5 d-flex flex-column justify-content-center"
+            style="
+              background-color: #fef4f4;
+              border-top-left-radius: 48px;
+              border-bottom-left-radius: 48px;
+            "
+          >
+            <div>
+              <h3>When we started</h3>
+              <div class="row mt-4">
+                <div class="col">
+                  <h4 style="color: #514288">9+</h4>
+                  <p>Years Legacy of Learning</p>
+                </div>
+                <div class="col">
+                  <h4 style="color: #514288">45</h4>
+                  <p>Faculty of Expert Educators</p>
+                </div>
+                <div class="col">
+                  <h4 style="color: #514288">2K+</h4>
+                  <p>Bright Students</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3>Where we are now</h3>
+              <div class="row mt-4">
+                <div class="col">
+                  <h4 style="color: #514288">9+</h4>
+                  <p>Years Legacy of Learning</p>
+                </div>
+                <div class="col">
+                  <h4 style="color: #514288">45</h4>
+                  <p>Faculty of Expert Educators</p>
+                </div>
+                <div class="col">
+                  <h4 style="color: #514288">2K+</h4>
+                  <p>Bright Students</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            class="col img-fluid"
+            src="./Assets/rectangle-25.jpg"
+            alt="growth"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+          Facilities
+        </h3>
+        <div class="m-0 ms-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_67_106)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20 0L24.401 3.57747L30 2.67904L32.0215 7.97852L37.321 10L36.4225 15.599L40 20L36.4225 24.401L37.321 30L32.0215 32.0215L30 37.321L24.401 36.4225L20 40L15.599 36.4225L10 37.321L7.97852 32.0215L2.67904 30L3.57747 24.401L0 20L3.57747 15.599L2.67904 10L7.97852 7.97852L10 2.67904L15.599 3.57747L20 0ZM13.2878 18.3464H16.4876C16.7448 18.3464 16.9564 18.5579 16.9564 18.8184V25.0749C16.9564 25.332 16.7448 25.5469 16.4876 25.5469H13.2878C13.0306 25.5469 12.8158 25.3353 12.8158 25.0749V18.8184C12.819 18.5579 13.0306 18.3464 13.2878 18.3464ZM20.1888 13.6556C20.4362 12.3991 22.4935 13.5579 22.6302 15.5827C22.6725 16.2012 22.6074 16.9238 22.4544 17.7279H25.3939C26.6178 17.7767 27.6823 18.6523 26.9303 20.0911C27.1029 20.7161 27.1289 21.4518 26.6602 21.7415C26.7188 22.7311 26.4453 23.3431 25.9342 23.8281C25.9017 24.3229 25.7943 24.7624 25.5566 25.1009C25.1628 25.6576 24.8405 25.5241 24.2188 25.5241H19.2546C18.4668 25.5241 18.0404 25.306 17.526 24.6615V19.1309C19.0072 18.7305 19.7917 16.7057 20.1888 15.3776V13.6556ZM20 7.81901C26.7285 7.81901 32.181 13.2747 32.181 20C32.181 26.7285 26.7253 32.181 20 32.181C13.2715 32.181 7.81901 26.7253 7.81901 20C7.81901 13.2715 13.2715 7.81901 20 7.81901Z"
+                fill="#272727"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_67_106">
+                <rect width="40" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div
+          class="mt-4 d-flex flex-column"
+          style="background-color: #fef4f4; border-radius: 40px"
+        >
+          <div id="facilitiesCarousel" class="carousel mt-4">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/science-lab.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">Science lab</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/computer-lab.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">Computer Lab</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/library.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">Book Treasure</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/library.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">E-learning</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/library.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">Activity hall</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/library.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">In House Couching</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col p-4">
+                  <div
+                    class="d-flex flex-column align-items-center p-3 acadmicsCard"
+                    style="
+                      border: solid 1px #c2272d;
+                      border-radius: 48px;
+                      background-color: white;
+                    "
+                  >
+                    <img
+                      class="img-fluid"
+                      src="./Assets/library.jpeg"
+                      alt="kinderboost"
+                      style="height: 275px; width: 450px; border-radius: 20px"
+                    />
+                    <h3 class="mt-4 text-center">Sankul</h3>
+                    <p class="mt-3 text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Numquam perspiciatis est enim neque alias inventore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="align-self-center my-4">
+            <button
+              id="facilities-carousel-control-prev"
+              type="button"
+              data-bs-target="#facilitiesCarousel"
+              data-bs-slide="prev"
+              class="px-3 rounded-start-pill"
+              style="
+                background-color: #fff;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+              "
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_67_96)">
+                    <path
+                      d="M5.9397 14.0603L0.659968 19.34C0.484934 19.5151 0.386601 19.7525 0.386601 20C0.386601 20.2475 0.484934 20.4849 0.659968 20.66L5.9397 25.9397C6.07017 26.0706 6.23657 26.1599 6.41782 26.1961C6.59907 26.2324 6.787 26.214 6.95779 26.1433C7.12858 26.0726 7.27453 25.9528 7.37714 25.7991C7.47976 25.6453 7.53441 25.4646 7.53418 25.2797L7.53286 20.9332L38.2781 20.9345V19.0655L7.53286 19.0668L7.53418 14.7203C7.53441 14.5354 7.47976 14.3547 7.37714 14.2009C7.27453 14.0472 7.12858 13.9274 6.95779 13.8567C6.787 13.786 6.59907 13.7676 6.41782 13.8039C6.23657 13.8401 6.07017 13.9294 5.9397 14.0603Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_67_96">
+                      <rect
+                        width="28"
+                        height="28"
+                        fill="white"
+                        transform="translate(0 20) rotate(-45)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </button>
+            <button
+              id="facilities-carousel-control-next"
+              type="button"
+              data-bs-target="#facilitiesCarousel"
+              data-bs-slide="next"
+              class="px-3 rounded-start-pill"
+              style="
+                background-color: #fff;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+              "
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_67_98)">
+                    <path
+                      d="M34.0603 25.9397L39.34 20.66C39.5151 20.4849 39.6134 20.2475 39.6134 20C39.6134 19.7525 39.5151 19.5151 39.34 19.34L34.0603 14.0603C33.9298 13.9294 33.7634 13.8401 33.5822 13.8039C33.4009 13.7676 33.213 13.786 33.0422 13.8567C32.8714 13.9274 32.7255 14.0472 32.6229 14.2009C32.5202 14.3547 32.4656 14.5354 32.4658 14.7203L32.4671 19.0668L1.72195 19.0655L1.72195 20.9345L32.4671 20.9332L32.4658 25.2797C32.4656 25.4646 32.5202 25.6453 32.6229 25.7991C32.7255 25.9528 32.8714 26.0726 33.0422 26.1433C33.213 26.214 33.4009 26.2324 33.5822 26.1961C33.7634 26.1599 33.9298 26.0706 34.0603 25.9397Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_67_98">
+                      <rect
+                        width="28"
+                        height="28"
+                        fill="white"
+                        transform="translate(40 20) rotate(135)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+          A Message Of Vision: Building Tomorrow Together
+        </h3>
+        <div class="m-0 ms-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="43"
+            viewBox="0 0 32 43"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_67_278)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.1744 39.39L5.19736 38.6727L7.18285 42.2244C8.62086 44.009 9.53564 41.0775 9.95491 40.0553L13.7838 32.7821C12.8933 32.4737 11.8226 31.5797 10.7172 30.5818C8.5169 30.6268 6.46904 30.2353 4.95827 28.3225L0.519503 36.8882L0.131414 37.7129C-0.170048 38.7802 -0.0106543 39.487 1.17094 39.39H1.1744ZM16.2059 9.56607L17.5192 12.6431L20.8526 12.9411C20.9225 12.9481 20.9868 12.982 21.0321 13.0357C21.0774 13.0894 21.1 13.1586 21.0951 13.2287C21.0884 13.2978 21.0563 13.362 21.005 13.4088L18.4859 15.6092L19.2309 18.8698C19.2419 18.9218 19.2372 18.9759 19.2176 19.0252C19.198 19.0746 19.1643 19.1171 19.1207 19.1474C19.0771 19.1777 19.0255 19.1945 18.9723 19.1957C18.9192 19.1968 18.867 19.1823 18.822 19.1539L15.9599 17.4318L13.0873 19.147C13.027 19.1828 12.955 19.1935 12.8869 19.1766C12.8188 19.1598 12.7601 19.1168 12.7235 19.0569C12.7052 19.0278 12.6929 18.9953 12.6876 18.9614C12.6822 18.9274 12.6838 18.8927 12.6923 18.8594L13.4373 15.5988L10.9182 13.3984C10.8673 13.3525 10.836 13.2887 10.8308 13.2204C10.8256 13.152 10.847 13.0842 10.8905 13.0312C10.9386 12.9777 11.0058 12.9453 11.0776 12.9411L14.4006 12.6431L15.7139 9.56607C15.7414 9.50163 15.7932 9.45061 15.858 9.42403C15.9228 9.39745 15.9955 9.39744 16.0604 9.424C16.0926 9.43654 16.1219 9.45565 16.1463 9.48011C16.1708 9.50456 16.1899 9.53384 16.2024 9.56607H16.2059ZM16.0015 0.210361C16.6985 0.197073 17.3809 0.411153 17.9454 0.820215C18.7112 1.30533 19.5601 2.25822 20.617 2.86115C22.1 3.71009 24.8513 2.53889 26.2616 4.6318C27.0828 5.85151 27.1209 6.80787 27.1833 7.75037C27.2275 8.9766 27.6813 10.1526 28.4723 11.0907C30.2048 13.3742 30.5513 14.9023 29.6677 16.4824C29.0614 17.56 27.7827 18.1629 27.4882 18.8456C26.8576 20.3009 27.554 21.3993 26.6912 23.0972C26.4195 23.6567 26.0351 24.1542 25.5623 24.5584C25.0895 24.9627 24.5384 25.265 23.9434 25.4465C22.9039 25.793 21.8644 25.2975 21.0362 25.6475C19.5774 26.2643 18.4998 27.6884 17.3251 28.0488C16.453 28.3204 15.5188 28.3204 14.6466 28.0488C13.4858 27.7023 12.4082 26.2643 10.9529 25.651C10.1212 25.3045 9.08171 25.7861 8.04565 25.45C7.44959 25.2698 6.89735 24.968 6.4238 24.5637C5.95025 24.1593 5.56569 23.6612 5.29438 23.1007C4.44544 21.4028 5.14192 20.3078 4.50434 18.849C4.20635 18.156 2.92773 17.5635 2.32134 16.4858C1.43082 14.8988 1.79119 13.3673 3.52026 11.0942C4.55978 9.70814 4.74343 8.77257 4.80927 7.75384C4.86818 6.80787 4.90629 5.85151 5.72752 4.63527C7.1378 2.55622 9.88561 3.71356 11.3756 2.86461C12.4151 2.26169 13.2849 1.30879 14.0472 0.827145C14.6134 0.412991 15.3001 0.196292 16.0015 0.210361ZM15.9599 6.07674C17.6148 6.07674 19.2326 6.56744 20.6086 7.48679C21.9847 8.40614 23.0573 9.71286 23.6907 11.2417C24.3242 12.7706 24.4901 14.453 24.1675 16.0762C23.8449 17.6993 23.0483 19.1904 21.8783 20.3609C20.7083 21.5313 19.2176 22.3286 17.5946 22.6519C15.9715 22.9751 14.2891 22.8099 12.7599 22.1771C11.2308 21.5442 9.92362 20.4722 9.0037 19.0965C8.08378 17.7208 7.59241 16.1033 7.59173 14.4484C7.59173 12.229 8.47337 10.1005 10.0427 8.53118C11.612 6.96185 13.7405 6.0802 15.9599 6.0802V6.07674ZM30.8389 39.39L26.8229 38.6727L24.8374 42.2244C23.396 44.009 22.4812 41.0775 22.0654 40.0553L18.2157 32.7821C19.1062 32.4737 20.1804 31.5797 21.2823 30.5818C23.4826 30.6268 25.5339 30.2353 27.0412 28.3225L31.4834 36.9021L31.8785 37.7129C32.1799 38.7802 32.0205 39.487 30.8389 39.39Z"
+                fill="#272727"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_67_278">
+                <rect
+                  width="32"
+                  height="42.5789"
+                  fill="white"
+                  transform="translate(0 0.210449)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-4 g-5">
+          <div class="col">
+            <div
+              class="row row-cols-1 row-cols-sm-1 row-cols-md-2 align-items-center"
+              style="border-radius: 40px; background: #fef4f4"
+            >
+              <div class="col d-flex flex-column align-items-streach p-0">
+                <img
+                  class="img-fluid"
+                  src="./Assets/rectangle-38.jpg"
+                  alt="rectangle-38"
+                />
+                <div
+                  class="p-3"
+                  style="
+                    background-color: #c2272d;
+                    border-bottom-left-radius: 48px;
+                  "
+                >
+                  <h3 class="text-white">Mr.Vijay Barate</h3>
+                  <h4 class="mt-3 text-white">Founder/Chairman</h4>
+                </div>
+              </div>
+              <div class="col">
+                <p class="mt-4 ms-2 me-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="23"
+                    viewBox="0 0 35 23"
+                    fill="none"
+                    style="position: relative; top: -10px"
+                  >
+                    <path
+                      d="M30.0772 9.06269C31.3463 9.48572 32.3615 10.2472 33.123 11.347C33.8844 12.3623 34.2651 13.5045 34.2651 14.7735C34.3497 16.0426 34.0113 17.3117 33.2499 18.5808C32.573 19.7653 31.4732 20.7805 29.9503 21.6266C27.4967 22.8957 25.3393 23.2341 23.478 22.6418C21.6167 21.965 20.3053 20.9497 19.5438 19.5961C19.1208 18.9192 18.7824 17.9885 18.5286 16.8041C18.3593 15.6196 18.2747 14.3928 18.2747 13.1237C18.3593 11.7701 18.5286 10.4587 18.7824 9.1896C19.0362 7.92052 19.4169 6.86295 19.9245 6.0169C20.3476 5.42466 20.8552 4.79012 21.4474 4.11328C21.9551 3.52104 22.5473 2.92881 23.2242 2.33657C23.9856 1.74433 24.8317 1.1944 25.7623 0.686768L30.2041 0.940583C29.6119 1.61743 29.0619 2.25197 28.5543 2.8442C28.1313 3.35183 27.7505 3.81716 27.4121 4.24019C27.0737 4.66322 26.7353 5.04394 26.3969 5.38236C25.8046 5.9746 25.3393 6.56683 25.0009 7.15907C24.6624 7.6667 24.3663 8.21664 24.1125 8.80888C23.9433 9.40111 23.9433 9.99335 24.1125 10.5856C25.2124 9.40111 26.4815 8.80888 27.9197 8.80888C28.5966 8.80888 29.3157 8.89348 30.0772 9.06269ZM12.5639 9.69723C13.7484 10.3741 14.5944 11.3047 15.102 12.4892C15.6943 13.5891 15.9058 14.7735 15.7366 16.0426C15.5674 17.3117 15.0174 18.4962 14.0868 19.5961C13.2407 20.6959 11.9716 21.542 10.2795 22.1342C7.65678 22.9803 5.49934 22.938 3.80724 22.0073C2.11513 20.992 0.972961 19.7653 0.380724 18.327C0.126908 17.5655 0 16.5926 0 15.4081C0 14.2236 0.126908 12.9968 0.380724 11.7278C0.63454 10.4587 0.972961 9.2319 1.39599 8.04743C1.81901 6.86295 2.36895 5.88999 3.04579 5.12855C3.55342 4.53631 4.14566 3.98637 4.8225 3.47874C5.41474 3.05572 6.09158 2.59039 6.85303 2.08275C7.69908 1.57512 8.62974 1.10979 9.645 0.686768L14.0868 1.82894C13.4099 2.42118 12.7754 2.92881 12.1832 3.35183C11.6755 3.77486 11.2102 4.15558 10.7872 4.49401C10.3641 4.83243 9.94112 5.17085 9.5181 5.50927C8.92586 6.0169 8.41823 6.52453 7.9952 7.03216C7.57217 7.45519 7.19145 7.96282 6.85303 8.55506C6.51461 9.06269 6.3877 9.61263 6.4723 10.2049C7.14915 9.69723 7.82599 9.40111 8.50283 9.31651C9.26428 9.1473 9.94112 9.10499 10.5334 9.1896C11.2102 9.2742 11.887 9.44341 12.5639 9.69723Z"
+                      fill="#ADAAAA"
+                    />
+                  </svg>
+                  &nbsp;&nbsp;A flame had always been kindling in my heart, to
+                  work for children. Sahyadri National School is a manifestation
+                  of this thought. With an urge to provide quality education in
+                  English, to each child, irrespective of the background, a seed
+                  was sown in the year 2003. Today, it has grown into a
+                  ‘Kalpavruksha’. A family that embraces students of all ability
+                  levels and equips them to meet the challenges of education,
+                  work and life. Let us join our hands together to mould our
+                  students into future forerunners of good and responsible
+                  citizens.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="row row-cols-1 row-cols-sm-1 row-cols-md-2 align-items-center"
+              style="border-radius: 40px; background: #fef4f4"
+            >
+              <div class="col d-flex flex-column align-items-streach p-0">
+                <img
+                  class="img-fluid"
+                  src="./Assets/rectangle-40.jpg"
+                  alt="rectangle-40"
+                />
+                <div
+                  class="p-3"
+                  style="
+                    background-color: #514288;
+                    border-bottom-left-radius: 48px;
+                  "
+                >
+                  <h3 class="text-white">Mrs.Shubhada Deshmukh</h3>
+                  <h4 class="mt-3 text-white">headmistress</h4>
+                </div>
+              </div>
+              <div class="col">
+                <p class="mt-4 ms-2 me-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="23"
+                    viewBox="0 0 35 23"
+                    fill="none"
+                    style="position: relative; top: -10px"
+                  >
+                    <path
+                      d="M30.0772 9.06269C31.3463 9.48572 32.3615 10.2472 33.123 11.347C33.8844 12.3623 34.2651 13.5045 34.2651 14.7735C34.3497 16.0426 34.0113 17.3117 33.2499 18.5808C32.573 19.7653 31.4732 20.7805 29.9503 21.6266C27.4967 22.8957 25.3393 23.2341 23.478 22.6418C21.6167 21.965 20.3053 20.9497 19.5438 19.5961C19.1208 18.9192 18.7824 17.9885 18.5286 16.8041C18.3593 15.6196 18.2747 14.3928 18.2747 13.1237C18.3593 11.7701 18.5286 10.4587 18.7824 9.1896C19.0362 7.92052 19.4169 6.86295 19.9245 6.0169C20.3476 5.42466 20.8552 4.79012 21.4474 4.11328C21.9551 3.52104 22.5473 2.92881 23.2242 2.33657C23.9856 1.74433 24.8317 1.1944 25.7623 0.686768L30.2041 0.940583C29.6119 1.61743 29.0619 2.25197 28.5543 2.8442C28.1313 3.35183 27.7505 3.81716 27.4121 4.24019C27.0737 4.66322 26.7353 5.04394 26.3969 5.38236C25.8046 5.9746 25.3393 6.56683 25.0009 7.15907C24.6624 7.6667 24.3663 8.21664 24.1125 8.80888C23.9433 9.40111 23.9433 9.99335 24.1125 10.5856C25.2124 9.40111 26.4815 8.80888 27.9197 8.80888C28.5966 8.80888 29.3157 8.89348 30.0772 9.06269ZM12.5639 9.69723C13.7484 10.3741 14.5944 11.3047 15.102 12.4892C15.6943 13.5891 15.9058 14.7735 15.7366 16.0426C15.5674 17.3117 15.0174 18.4962 14.0868 19.5961C13.2407 20.6959 11.9716 21.542 10.2795 22.1342C7.65678 22.9803 5.49934 22.938 3.80724 22.0073C2.11513 20.992 0.972961 19.7653 0.380724 18.327C0.126908 17.5655 0 16.5926 0 15.4081C0 14.2236 0.126908 12.9968 0.380724 11.7278C0.63454 10.4587 0.972961 9.2319 1.39599 8.04743C1.81901 6.86295 2.36895 5.88999 3.04579 5.12855C3.55342 4.53631 4.14566 3.98637 4.8225 3.47874C5.41474 3.05572 6.09158 2.59039 6.85303 2.08275C7.69908 1.57512 8.62974 1.10979 9.645 0.686768L14.0868 1.82894C13.4099 2.42118 12.7754 2.92881 12.1832 3.35183C11.6755 3.77486 11.2102 4.15558 10.7872 4.49401C10.3641 4.83243 9.94112 5.17085 9.5181 5.50927C8.92586 6.0169 8.41823 6.52453 7.9952 7.03216C7.57217 7.45519 7.19145 7.96282 6.85303 8.55506C6.51461 9.06269 6.3877 9.61263 6.4723 10.2049C7.14915 9.69723 7.82599 9.40111 8.50283 9.31651C9.26428 9.1473 9.94112 9.10499 10.5334 9.1896C11.2102 9.2742 11.887 9.44341 12.5639 9.69723Z"
+                      fill="#ADAAAA"
+                    />
+                  </svg>
+                  &nbsp;&nbsp;A flame had always been kindling in my heart, to
+                  work for children. Sahyadri National School is a manifestation
+                  of this thought. With an urge to provide quality education in
+                  English, to each child, irrespective of the background, a seed
+                  was sown in the year 2003. Today, it has grown into a
+                  ‘Kalpavruksha’. A family that embraces students of all ability
+                  levels and equips them to meet the challenges of education,
+                  work and life. Let us join our hands together to mould our
+                  students into future forerunners of good and responsible
+                  citizens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+          Building Bonds with Students and Parents
+        </h3>
+        <div class="m-0 ms-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="52"
+            height="40"
+            viewBox="0 0 52 40"
+            fill="none"
+            style="margin-left: 10px"
+          >
+            <g clip-path="url(#clip0_67_129)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M25.6588 0L26.9868 3.24494L30.4865 3.50386L27.8137 5.77156L28.649 9.17519L25.6713 7.3293L22.6811 9.18772L23.5164 5.78409L20.8352 3.50386L24.3308 3.24494L25.6588 0ZM22.9442 19.361C24.9492 18.8239 27.0684 18.8933 29.0338 19.5606C30.9993 20.2278 32.7228 21.4629 33.9863 23.1096C35.2499 24.7563 35.9968 26.7408 36.1325 28.812C36.2683 30.8832 35.7869 32.9481 34.7491 34.7457C33.7113 36.5433 32.1638 37.9927 30.3022 38.9108C28.4407 39.8289 26.3487 40.1744 24.2908 39.9036C22.2329 39.6328 20.3015 38.7578 18.7409 37.3893C17.1803 36.0209 16.0604 34.2204 15.5231 32.2155C15.1662 30.8842 15.0751 29.4956 15.255 28.1291C15.4348 26.7626 15.8821 25.4448 16.5712 24.2512C17.2603 23.0575 18.1778 22.0113 19.2713 21.1722C20.3648 20.3332 21.6129 19.7177 22.9442 19.361ZM11.3928 24.9864C11.2981 25.2683 11.0953 25.501 10.829 25.6334C10.5627 25.7658 10.2547 25.7869 9.97285 25.6922C9.69097 25.5975 9.45825 25.3947 9.32589 25.1284C9.19353 24.8621 9.17237 24.5542 9.26707 24.2723C10.4228 20.8435 12.6247 17.8635 15.5628 15.7516C18.5009 13.6398 22.0273 12.5024 25.6456 12.4996C29.264 12.4969 32.7921 13.6288 35.7334 15.7362C38.6747 17.8436 40.8812 20.8202 42.0422 24.2472C42.1249 24.5256 42.0966 24.8252 41.9633 25.0832C41.8299 25.3412 41.6018 25.5375 41.3268 25.6309C41.0519 25.7244 40.7514 25.7077 40.4885 25.5845C40.2255 25.4612 40.0205 25.2409 39.9165 24.9697C38.9078 21.987 36.9893 19.3957 34.431 17.5602C31.8727 15.7247 28.8033 14.7375 25.6546 14.7375C22.506 14.7375 19.4366 15.7247 16.8783 17.5602C14.3199 19.3957 12.4015 21.987 11.3928 24.9697V24.9864ZM22.9693 24.5187C23.7043 24.5187 24.3015 25.379 24.3015 26.4439C24.3015 27.5089 23.7169 28.3692 22.9693 28.3692C22.2218 28.3692 21.6413 27.5047 21.6413 26.4439C21.6413 25.3832 22.2343 24.5187 22.9693 24.5187ZM19.9958 31.1004C20.4243 31.6542 20.9339 32.1399 21.5076 32.5412C22.7603 33.4037 24.251 33.8534 25.7716 33.8275C27.2594 33.8197 28.705 33.332 29.8935 32.4368C30.3875 32.0588 30.82 31.6066 31.1756 31.0963C31.1825 31.0901 31.1914 31.0867 31.2007 31.0867C31.2099 31.0867 31.2188 31.0901 31.2257 31.0963L31.6433 31.5139C31.6495 31.5208 31.6529 31.5297 31.6529 31.5389C31.6529 31.5482 31.6495 31.5571 31.6433 31.564C31.0469 32.5941 30.2226 33.4741 29.2337 34.1366C28.2178 34.8189 27.0283 35.197 25.805 35.2266C24.562 35.2454 23.3385 34.917 22.2719 34.2786C21.1556 33.5982 20.2087 32.6728 19.503 31.5724C19.4969 31.5655 19.4935 31.5565 19.4935 31.5473C19.4935 31.5381 19.4969 31.5291 19.503 31.5222L19.9207 31.1046C19.9282 31.0981 19.9378 31.0946 19.9478 31.0946C19.9578 31.0946 19.9674 31.0981 19.9749 31.1046L19.9958 31.1004ZM28.3483 24.5187C29.0833 24.5187 29.6763 25.379 29.6763 26.4439C29.6763 27.5089 29.0833 28.3692 28.3483 28.3692C27.6133 28.3692 27.0161 27.5047 27.0161 26.4439C27.0161 25.3832 27.6133 24.5187 28.3483 24.5187ZM51.3176 14.7338L49.171 17.5026L50.6953 20.664L47.3961 19.478L44.8611 21.9044L44.9697 18.4005L41.8835 16.73L45.2495 15.7528L45.8718 12.299L47.843 15.1932L51.3176 14.7254V14.7338ZM40.4176 3.82961L39.9457 7.30424L42.844 9.2796L39.3944 9.90186L38.4214 13.2679L36.7509 10.1775L33.2428 10.2861L35.6692 7.75527L34.4832 4.45187L37.6404 5.9762L40.4134 3.82961H40.4176ZM0 14.7338L3.47463 15.2057L5.42911 12.3074L6.05554 15.7569L9.42159 16.7384L6.33118 18.4089L6.43976 21.9127L3.92566 19.4738L0.622259 20.664L2.14659 17.5068L0 14.7338ZM10.9 3.82961L13.673 5.9762L16.8302 4.45187L15.6484 7.7511L18.0748 10.2861L14.5667 10.1775L12.8962 13.2679L11.9148 9.90186L8.46106 9.2796L11.3594 7.30424L10.9 3.82961Z"
+                fill="#272727"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_67_129">
+                <rect width="51.3176" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div
+          class="mt-4 d-flex flex-column"
+          style="background-color: #fef4f4; border-radius: 40px"
+        >
+          <div id="parentReviewCarousel" class="carousel mt-4">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img src="./Assets/ellipse-5.png" alt="ellipse-5" />
+                  <p class="text-center mt-4">
+                    1 Our child's academic journey has been nothing short of
+                    extraordinary thanks to the dedicated teachers and
+                    innovative learning programs at this school.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img src="./Assets/ellipse-5.png" alt="ellipse-5" />
+                  <p class="text-center mt-4">
+                    2 Our child's academic journey has been nothing short of
+                    extraordinary thanks to the dedicated teachers and
+                    innovative learning programs at this school.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img src="./Assets/ellipse-5.png" alt="ellipse-5" />
+                  <p class="text-center mt-4">
+                    3 Our child's academic journey has been nothing short of
+                    extraordinary thanks to the dedicated teachers and
+                    innovative learning programs at this school.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img src="./Assets/ellipse-5.png" alt="ellipse-5" />
+                  <p class="text-center mt-4">
+                    4 Our child's academic journey has been nothing short of
+                    extraordinary thanks to the dedicated teachers and
+                    innovative learning programs at this school.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img src="./Assets/ellipse-5.png" alt="ellipse-5" />
+                  <p class="text-center mt-4">
+                    5 Our child's academic journey has been nothing short of
+                    extraordinary thanks to the dedicated teachers and
+                    innovative learning programs at this school.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img src="./Assets/ellipse-5.png" alt="ellipse-5" />
+                  <p class="text-center mt-4">
+                    6 Our child's academic journey has been nothing short of
+                    extraordinary thanks to the dedicated teachers and
+                    innovative learning programs at this school.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="align-self-center my-4">
+            <button
+              id="parent-carousel-control-prev"
+              type="button"
+              data-bs-target="#parentReviewCarousel"
+              data-bs-slide="prev"
+              class="px-3 rounded-start-pill"
+              style="
+                background-color: #fff;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+              "
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_67_96)">
+                    <path
+                      d="M5.9397 14.0603L0.659968 19.34C0.484934 19.5151 0.386601 19.7525 0.386601 20C0.386601 20.2475 0.484934 20.4849 0.659968 20.66L5.9397 25.9397C6.07017 26.0706 6.23657 26.1599 6.41782 26.1961C6.59907 26.2324 6.787 26.214 6.95779 26.1433C7.12858 26.0726 7.27453 25.9528 7.37714 25.7991C7.47976 25.6453 7.53441 25.4646 7.53418 25.2797L7.53286 20.9332L38.2781 20.9345V19.0655L7.53286 19.0668L7.53418 14.7203C7.53441 14.5354 7.47976 14.3547 7.37714 14.2009C7.27453 14.0472 7.12858 13.9274 6.95779 13.8567C6.787 13.786 6.59907 13.7676 6.41782 13.8039C6.23657 13.8401 6.07017 13.9294 5.9397 14.0603Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_67_96">
+                      <rect
+                        width="28"
+                        height="28"
+                        fill="white"
+                        transform="translate(0 20) rotate(-45)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </button>
+            <button
+              id="parent-carousel-control-next"
+              type="button"
+              data-bs-target="#parentReviewCarousel"
+              data-bs-slide="next"
+              class="px-3 rounded-start-pill"
+              style="
+                background-color: #fff;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+              "
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_67_98)">
+                    <path
+                      d="M34.0603 25.9397L39.34 20.66C39.5151 20.4849 39.6134 20.2475 39.6134 20C39.6134 19.7525 39.5151 19.5151 39.34 19.34L34.0603 14.0603C33.9298 13.9294 33.7634 13.8401 33.5822 13.8039C33.4009 13.7676 33.213 13.786 33.0422 13.8567C32.8714 13.9274 32.7255 14.0472 32.6229 14.2009C32.5202 14.3547 32.4656 14.5354 32.4658 14.7203L32.4671 19.0668L1.72195 19.0655L1.72195 20.9345L32.4671 20.9332L32.4658 25.2797C32.4656 25.4646 32.5202 25.6453 32.6229 25.7991C32.7255 25.9528 32.8714 26.0726 33.0422 26.1433C33.213 26.214 33.4009 26.2324 33.5822 26.1961C33.7634 26.1599 33.9298 26.0706 34.0603 25.9397Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_67_98">
+                      <rect
+                        width="28"
+                        height="28"
+                        fill="white"
+                        transform="translate(40 20) rotate(135)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+          Celebrating Our Achievements
+        </h3>
+        <div class="m-0 ms-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="29"
+            viewBox="0 0 24 29"
+            fill="none"
+            style="margin-left: 10px"
+          >
+            <g clip-path="url(#clip0_136_76)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M19.466 10.9167C20.2017 10.6914 20.8569 10.3285 21.3902 9.8688C22.2652 9.11384 22.805 8.08845 22.805 6.96841C22.805 6.34191 22.6374 5.74696 22.337 5.21511H22.3392C22.2042 4.97622 22.0432 4.74861 21.8582 4.53677C21.7624 5.93401 21.4315 7.25913 20.9135 8.46481C20.5304 9.35498 20.0406 10.1798 19.466 10.9167ZM12.2764 21.2089L12.8924 22.9961L14.7252 23.0501L13.2734 24.2085L13.7892 26.0294L12.2764 24.9567L10.7636 26.0294L11.2795 24.2085L9.82768 23.0501L11.6604 22.9961L12.2764 21.2089ZM4.49048 18.8945H20.0646V28.3461H4.49048V18.8945ZM13.2189 14.1912V15.6673H13.3256V16.6995H10.6222V15.6673H10.7288V14.1822C9.08108 13.9185 7.57482 13.1478 6.345 12.021L6.19917 12.4379C4.50354 12.4086 2.96898 11.8024 1.8567 10.8424C0.709595 9.85528 0 8.48509 0 6.96616C0 6.10979 0.228551 5.29849 0.637765 4.57058L0.635589 4.56832C1.04916 3.83139 1.64992 3.18686 2.38346 2.68205L3.04734 2.22457H2.27898V0.653809H21.5665V2.22457H20.9527L21.6165 2.68205C22.3479 3.18686 22.9465 3.83139 23.3622 4.56832H23.3644C23.7714 5.29398 24 6.10528 24 6.96616C24 8.48509 23.2904 9.85303 22.1411 10.8446C21.0288 11.8047 19.4943 12.4109 17.7987 12.4402L17.6528 12.021C16.4099 13.1613 14.8863 13.9366 13.2189 14.1912ZM9.17685 17.7339H14.7731V18.766H9.17685V17.7339ZM10.0301 16.6995H13.9198V17.7316H10.0301V16.6995ZM2.60983 9.8688C3.14312 10.3308 3.80047 10.6914 4.53619 10.919C3.96155 10.1821 3.47179 9.35723 3.08652 8.46255C2.56847 7.25913 2.23762 5.93175 2.14185 4.53452C1.96118 4.74185 1.80011 4.97172 1.66298 5.21285H1.6608C1.3626 5.74245 1.19499 6.33966 1.19499 6.96616C1.19499 8.08845 1.73481 9.11159 2.60983 9.8688Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_136_76">
+                <rect
+                  width="24"
+                  height="27.6923"
+                  fill="white"
+                  transform="translate(0 0.653809)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="mt-4 d-flex flex-column">
+          <div
+            id="achievementsCarousel"
+            class="carousel"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <img
+                class="carousel-item img-fluid active"
+                src="./Assets/achievement/achievement-0.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-1.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-2.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-3.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-4.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-5.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-6.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-7.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-8.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-9.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-10.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-11.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-12.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-13.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px; padding-right: 20px"
+              />
+              <img
+                class="carousel-item img-fluid"
+                src="./Assets/achievement/achievement-14.png"
+                alt="kinderboost"
+                style="height: 300px; width: 500px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: #4c4c4c">
+      <div class="container-fluid align-items-center">
+        <div class="row p-5">
+          <div class="col col-sm-3">
+            <img class="img-fluid" src="./Assets/ssdlogo.png" alt="logo" />
+            <p class="text-white mt-3 pe-3">
+              Follow us on various social media platforms to stay updated with
+              the latest news & updates.
+            </p>
+            <div class="d-flex mt-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="28"
+                viewBox="0 0 26 28"
+                fill="none"
+              >
+                <path
+                  d="M26 14.3817C26 6.8802 20.1803 0.799805 13 0.799805C5.81967 0.799805 0 6.8802 0 14.3817C0 21.1623 4.7528 26.781 10.9685 27.7998V18.3084H7.66827V14.3808H10.9685V11.3892C10.9685 7.9854 12.909 6.1044 15.8791 6.1044C17.3004 6.1044 18.7893 6.3699 18.7893 6.3699V9.7125H17.1487C15.5341 9.7125 15.0315 10.7601 15.0315 11.8347V14.3817H18.6368L18.0605 18.3075H15.0315V27.7998C21.2472 26.781 26 21.1623 26 14.3817Z"
+                  fill="#C6C6C6"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="33"
+                viewBox="0 0 32 33"
+                fill="none"
+                class="ms-3"
+              >
+                <path
+                  d="M26.6033 11.3601C26.6196 11.5952 26.6196 11.8303 26.6196 12.0675C26.6196 19.2967 21.1161 27.6342 11.0529 27.6342V27.6299C8.08019 27.6342 5.16923 26.7827 2.66669 25.1772C3.09894 25.2292 3.53337 25.2552 3.96887 25.2562C6.43241 25.2584 8.82553 24.4318 10.7636 22.9097C8.42253 22.8653 6.36958 21.3388 5.6524 19.1104C6.4725 19.2686 7.31751 19.2361 8.12244 19.0161C5.57007 18.5005 3.73379 16.2579 3.73379 13.6536C3.73379 13.6297 3.73379 13.607 3.73379 13.5842C4.4943 14.0078 5.34581 14.2429 6.21683 14.2689C3.81287 12.6623 3.07186 9.46424 4.52355 6.96387C7.30126 10.3818 11.3996 12.4597 15.7991 12.6796C15.3581 10.7794 15.9605 8.78823 17.3818 7.45246C19.5854 5.3811 23.051 5.48726 25.1224 7.68971C26.3476 7.44813 27.522 6.99854 28.5967 6.36153C28.1883 7.62796 27.3335 8.70373 26.1916 9.38732C27.2761 9.25949 28.3356 8.96915 29.3334 8.52606C28.5988 9.62674 27.6737 10.5855 26.6033 11.3601Z"
+                  fill="#C6C6C6"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="33"
+                viewBox="0 0 31 33"
+                fill="none"
+                class="ms-3"
+              >
+                <path
+                  d="M27.125 6.56451V27.0351C27.125 27.5031 26.9449 27.952 26.6243 28.2829C26.3037 28.6139 25.8688 28.7998 25.4154 28.7998H5.58456C5.13116 28.7998 4.69632 28.6139 4.37572 28.2829C4.05511 27.952 3.875 27.5031 3.875 27.0351V6.56451C3.875 6.09648 4.05511 5.64762 4.37572 5.31668C4.69632 4.98573 5.13116 4.7998 5.58456 4.7998H25.4154C25.8688 4.7998 26.3037 4.98573 26.6243 5.31668C26.9449 5.64762 27.125 6.09648 27.125 6.56451ZM10.7132 13.9763H7.29412V25.2704H10.7132V13.9763ZM11.021 10.0939C11.0228 9.82695 10.9736 9.56223 10.8763 9.31487C10.779 9.06751 10.6354 8.84236 10.4538 8.65227C10.2722 8.46218 10.0561 8.31088 9.81785 8.207C9.57959 8.10313 9.32385 8.04871 9.06522 8.04686H9.00368C8.47773 8.04686 7.97332 8.26254 7.60142 8.64643C7.22952 9.03033 7.02059 9.55101 7.02059 10.0939C7.02059 10.6368 7.22952 11.1575 7.60142 11.5414C7.97332 11.9253 8.47773 12.141 9.00368 12.141C9.26232 12.1475 9.51969 12.1014 9.76107 12.0053C10.0024 11.9092 10.2231 11.7649 10.4104 11.5807C10.5978 11.3965 10.7481 11.176 10.8529 10.9318C10.9576 10.6876 11.0147 10.4244 11.021 10.1575V10.0939ZM23.7059 18.4092C23.7059 15.0139 21.6134 13.6939 19.5346 13.6939C18.8539 13.6587 18.1762 13.8084 17.5691 14.1279C16.962 14.4475 16.4466 14.9258 16.0744 15.5151H15.9787V13.9763H12.7647V25.2704H16.1838V19.2633C16.1344 18.6481 16.3221 18.0376 16.7063 17.5644C17.0904 17.0913 17.6398 16.7937 18.2353 16.7363H18.3652C19.4525 16.7363 20.2594 17.4422 20.2594 19.221V25.2704H23.6785L23.7059 18.4092Z"
+                  fill="#C6C6C6"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="col col-sm-3">
+            <h4 class="text-white">Quick Links</h4>
+            <div class="d-flex flex-column">
+              <a class="text-white text-decoration-none mt-2">Home</a>
+              <a class="text-white text-decoration-none mt-2">Aspirants</a>
+              <a class="text-white text-decoration-none mt-2">Experts</a>
+              <a class="text-white text-decoration-none mt-2">Contact Us</a>
+              <a class="text-white text-decoration-none mt-2"
+                >Media Expertrons</a
+              >
+              <a class="text-white text-decoration-none mt-2">Handbook</a>
+            </div>
+          </div>
+          <div class="col col-sm-3 mt-5 mt-sm-0">
+            <div>
+              <h4 class="text-white">Contact Us</h4>
+              <a
+                class="text-white text-decoration-none mt-2"
+                href="tel:+918888888888"
+                >+91 888 888 8888</a
+              >
+            </div>
+            <div class="mt-5">
+              <h4 class="text-white">Our Location</h4>
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consecteturadipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="col col-sm-3 mt-5 mt-sm-0">
+            <img
+              class="img-fluid"
+              src="./Assets/rectangle-33.jpg"
+              alt="school"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
