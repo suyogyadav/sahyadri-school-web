@@ -25,6 +25,17 @@
       .map-container {
         border-radius: 0px;
       }
+      .sliderImage {
+        width: 100%;
+        height: 230px;
+      }
+      h4 {
+        font-size: 3.7vmin;
+      }
+      .logo {
+        width: 25vw;
+        height: 20vw;
+      }
       @media (min-width: 768px) {
         .form-container {
           border: #c2272d solid 1px;
@@ -33,6 +44,17 @@
         }
         .map-container {
           border-radius: 0px 48px 48px 0px;
+        }
+        .sliderImage {
+          width: 100%;
+          height: 540px;
+        }
+        h4 {
+          font-size: 2.2vmin;
+        }
+        .logo {
+          width: 8vw;
+          height: 5vw;
         }
       }
     </style>
@@ -172,33 +194,12 @@
       </nav>
     </header>
     <div class="container-fluid p-0" style="max-height: 540px">
-      <img
-        src="./Assets/school.jpeg"
-        style="width: 100%; height: 540px; object-fit: fill"
-      />
+      <img src="./Assets/school.jpeg" class="sliderImage" />
     </div>
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 style="font-weight: 700; margin-left: 10px">Academics</h3>
-        <div style="margin-left: 10px">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 40 40"
-            fill="none"
-          >
-            <path
-              d="M23.695 5.83331C22.5404 5.28521 21.2782 5.00085 20 5.00085C18.7219 5.00085 17.4597 5.28521 16.305 5.83331L5.15338 11.0616C3.36005 11.9016 2.89172 14.2733 3.75005 15.9116V24.1666C3.75005 24.4982 3.88174 24.8161 4.11617 25.0505C4.35059 25.2849 4.66853 25.4166 5.00005 25.4166C5.33157 25.4166 5.64951 25.2849 5.88393 25.0505C6.11835 24.8161 6.25005 24.4982 6.25005 24.1666V17.7866L16.305 22.5C17.4597 23.0481 18.7219 23.3324 20 23.3324C21.2782 23.3324 22.5404 23.0481 23.695 22.5L34.8467 17.2716C37.2734 16.135 37.2734 12.1983 34.8467 11.0616L23.695 5.83331Z"
-              fill="#272727"
-            />
-            <path
-              d="M8.33337 21.525V27.7084C8.33337 29.3884 9.17171 30.9617 10.6417 31.775C13.09 33.1334 17.0067 35 20 35C22.9934 35 26.91 33.1317 29.3584 31.7767C30.8284 30.9617 31.6667 29.3884 31.6667 27.71V21.525L24.7567 24.765C23.2698 25.469 21.6452 25.8341 20 25.8341C18.3549 25.8341 16.7303 25.469 15.2434 24.765L8.33337 21.525Z"
-              fill="#272727"
-            />
-          </svg>
-        </div>
+        <h3 class="m-0 ms-2">Contact Us</h3>
       </div>
       <div class="row m-1 mt-2 align-items-center">
         <div

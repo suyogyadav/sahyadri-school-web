@@ -22,6 +22,30 @@
       .acadmicsCard:hover {
         box-shadow: 0 1rem 3rem #d2d2d2;
       }
+      .sliderImage {
+        width: 100%;
+        height: 230px;
+      }
+      h4 {
+        font-size: 3.7vmin;
+      }
+      .logo {
+        width: 25vw;
+        height: 20vw;
+      }
+      @media (min-width: 768px) {
+        .sliderImage {
+          width: 100%;
+          height: 540px;
+        }
+        h4 {
+          font-size: 2.2vmin;
+        }
+        .logo {
+          width: 8vw;
+          height: 5vw;
+        }
+      }
     </style>
   </head>
   <body style="font-family: 'Roboto', sans-serif">
@@ -30,15 +54,14 @@
         <div class="container-fluid">
           <a
             class="navbar-brand"
-            href="../index.html"
-            style="position: absolute; bottom: -60px"
+            href="./index.html"
+            style="position: absolute; bottom: -55px"
           >
             <img
               src="./Assets/logo.png"
               alt="Logo"
-              width="154"
-              height="110"
               style="border-radius: 16px"
+              class="logo"
             />
           </a>
           <a class="navbar-brand" style="visibility: hidden">logo</a>
@@ -85,7 +108,7 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style="color: #1e1e1e"
+                  style="color: #c2272d"
                 >
                   Sections
                 </a>
@@ -126,7 +149,7 @@
                   class="nav-link"
                   aria-current="page"
                   href="./aboutUs.html"
-                  style="color: #c2272d"
+                  style="color: #1e1e1e"
                   >About Us</a
                 >
               </li>
@@ -145,10 +168,10 @@
       </nav>
     </header>
     <div class="container-fluid p-0" style="max-height: 540px">
-      <img src="./Assets/classroom.jpeg" style="width: 100%; height: 540px" />
+      <img src="./Assets/classroom.jpeg" class="sliderImage" />
     </div>
     <div
-      class="container-fluid p-0 d-flex flex-column align-items-center justify-content-center"
+      class="container-fluid p-0 m-0 d-flex flex-column align-items-center justify-content-center"
     >
       <img
         src="./Assets/logo.png"
@@ -174,82 +197,68 @@
         participants in their education.
       </p>
     </div>
-    <div class="p-5">
+    <div id="activities-and-events" class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 style="font-weight: 700; margin-left: 10px">Academics</h3>
-        <div style="margin-left: 10px">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 40 40"
-            fill="none"
-          >
-            <path
-              d="M23.695 5.83331C22.5404 5.28521 21.2782 5.00085 20 5.00085C18.7219 5.00085 17.4597 5.28521 16.305 5.83331L5.15338 11.0616C3.36005 11.9016 2.89172 14.2733 3.75005 15.9116V24.1666C3.75005 24.4982 3.88174 24.8161 4.11617 25.0505C4.35059 25.2849 4.66853 25.4166 5.00005 25.4166C5.33157 25.4166 5.64951 25.2849 5.88393 25.0505C6.11835 24.8161 6.25005 24.4982 6.25005 24.1666V17.7866L16.305 22.5C17.4597 23.0481 18.7219 23.3324 20 23.3324C21.2782 23.3324 22.5404 23.0481 23.695 22.5L34.8467 17.2716C37.2734 16.135 37.2734 12.1983 34.8467 11.0616L23.695 5.83331Z"
-              fill="#272727"
-            />
-            <path
-              d="M8.33337 21.525V27.7084C8.33337 29.3884 9.17171 30.9617 10.6417 31.775C13.09 33.1334 17.0067 35 20 35C22.9934 35 26.91 33.1317 29.3584 31.7767C30.8284 30.9617 31.6667 29.3884 31.6667 27.71V21.525L24.7567 24.765C23.2698 25.469 21.6452 25.8341 20 25.8341C18.3549 25.8341 16.7303 25.469 15.2434 24.765L8.33337 21.525Z"
-              fill="#272727"
-            />
-          </svg>
+        <h3 class="m-0 ms-2">Academics</h3>
+      </div>
+      <div class="container-fluid">
+        <div
+          class="mt-4 row row-cols-1 row-cols-sm-1 row-cols-md-2 align-items-center"
+          style="background: #fef4f4; border-radius: 64px"
+        >
+          <img
+            class="col p-2"
+            src="./Assets/stratergy.jpeg"
+            style="border-radius: 64px; max-height: 450px"
+          />
+          <div class="col mt-3 mt-sm-2 p-4">
+            <h4>Empowering Change: Our Mission for Impact</h4>
+            <ul class="mt-3 mt-sm-3">
+              <li>
+                To provide our students enriching education experiences, to make
+                them the future forerunners of the indian citizens.
+              </li>
+              <li>
+                To be individualistic in our approach, i.e. cater to the
+                individual needs of each child.
+              </li>
+              <li>
+                To respect every individual, despite any casts, creed of colour.
+              </li>
+              <li>
+                To inculcate values in the students, such that make them
+                responsible citizen of the country
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div
-        class="row m-4 align-items-center p-2"
-        style="background: #fef4f4; border-radius: 64px"
-      >
-        <img
-          class="col-12 col-md-6"
-          src="./Assets/stratergy.jpeg"
-          alt="school"
-          style="border-radius: 64px"
-        />
-        <div class="col mt-4 mt-sm-2">
-          <h4>Empowering Change: Our Mission for Impact</h4>
-          <ul class="mt-3 mt-sm-3">
-            <li>
-              To provide our students enriching education experiences, to make
-              them the future forerunners of the indian citizens.
-            </li>
-            <li>
-              To be individualistic in our approach, i.e. cater to the
-              individual needs of each child.
-            </li>
-            <li>
-              To respect every individual, despite any casts, creed of colour.
-            </li>
-            <li>
-              To inculcate values in the students, such that make them
-              responsible citizen of the country
-            </li>
-          </ul>
+    </div>
+    <div id="activities-and-events" class="mx-3 my-4 m-md-5">
+      <div class="container-fluid">
+        <div
+          class="row row-cols-1 row-cols-sm-1 row-cols-md-2 align-items-center"
+          style="background: #fef4f4; border-radius: 64px"
+        >
+          <div class="col mt-3 mt-sm-2 p-4">
+            <h4>Dream, Believe, Achieve: Navigating Our Vision</h4>
+            <p class="mt-3 mt-sm-3 text-center text-sm-start">
+              At our institute, we transcend the traditional notion of a school.
+              It's a captivating realm where students and teachers alike embark
+              on a journey of shared learning. Our approach extends beyond
+              conventional textbooks, classrooms, and chalkboards. We've crafted
+              a comprehensive learning system with the objective of nurturing
+              the complete personality of each child, providing exposure to a
+              diverse array of learning experiences.
+            </p>
+          </div>
+          <img
+            class="col p-2"
+            src="./Assets/business.jpeg"
+            style="border-radius: 64px; max-height: 450px"
+          />
         </div>
-      </div>
-      <div
-        class="row m-4 align-items-center p-2"
-        style="background: #fef4f4; border-radius: 64px"
-      >
-        <div class="col ms-2 mt-4 mt-sm-4">
-          <h4>Dream, Believe, Achieve: Navigating Our Vision</h4>
-          <p class="mt-3 mt-sm-3 text-center text-sm-start">
-            At our institute, we transcend the traditional notion of a school.
-            It's a captivating realm where students and teachers alike embark on
-            a journey of shared learning. Our approach extends beyond
-            conventional textbooks, classrooms, and chalkboards. We've crafted a
-            comprehensive learning system with the objective of nurturing the
-            complete personality of each child, providing exposure to a diverse
-            array of learning experiences.
-          </p>
-        </div>
-        <img
-          class="col-12 col-md-6 mt-5 mt-sm-2"
-          src="./Assets/business.jpeg"
-          alt="school"
-          style="border-radius: 64px"
-        />
       </div>
     </div>
     <div style="background-color: #4c4c4c">
