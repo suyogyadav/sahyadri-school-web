@@ -30,6 +30,17 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
       }
+      .sliderImage {
+        width: 100%;
+        height: 230px;
+      }
+      h4 {
+        font-size: 3.7vmin;
+      }
+      .logo {
+        width: 15vw;
+        height: 10vw;
+      }
       @media (min-width: 768px) {
         #parentReviewCarousel .carousel-inner {
           display: flex;
@@ -54,6 +65,17 @@
           margin-right: 0;
           flex: 0 0 33.333333%;
           display: block;
+        }
+        .sliderImage {
+          width: 100%;
+          height: 540px;
+        }
+        h4 {
+          font-size: 2.2vmin;
+        }
+        .logo {
+          width: 3.5vw;
+          height: 2.5vw;
         }
       }
     </style>
@@ -174,23 +196,14 @@
     <header class="sticky-top" style="background-color: #fff">
       <nav class="navbar navbar-expand-lg bg-body-tertiary mx-lg-5">
         <div class="container-fluid">
-          <a
-            class="navbar-brand"
-            href="../index.html"
-            style="position: absolute; bottom: -60px"
-          >
+          <a class="navbar-brand" href="./index.html">
             <img
               src="./Assets/logo.png"
               alt="Logo"
-              width="154"
-              height="110"
               style="border-radius: 16px"
+              class="logo"
             />
           </a>
-          <a class="navbar-brand" style="visibility: hidden">logo</a>
-          <a class="navbar-brand" style="visibility: hidden">logo</a>
-          <a class="navbar-brand" style="visibility: hidden">logo</a>
-          <a class="navbar-brand" style="visibility: hidden">l</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -220,7 +233,7 @@
                   class="nav-link"
                   aria-current="page"
                   href="./index.html"
-                  style="color: #c2272d"
+                  style="color: #1e1e1e"
                   >Home</a
                 >
               </li>
@@ -231,7 +244,7 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  style="color: #1e1e1e"
+                  style="color: #c2272d"
                 >
                   Sections
                 </a>
@@ -296,56 +309,49 @@
           <div class="carousel-item active">
             <img
               src="./Assets/slider/kinder-home-slider-1.jpg"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/kinder-home-slider-2.jpg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/p1-home-slider-1.jpeg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/p1-home-slider-2.jpeg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/p2-home-slider-1.jpeg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/p2-home-slider-2.jpeg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/secondary-home-slider-1.jpeg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
           <div class="carousel-item">
             <img
               src="./Assets/slider/secondary-home-slider-2.jpeg"
-              class="img-fluid"
-              style="width: 100%; height: 540px"
+              class="sliderImage"
             />
           </div>
         </div>
@@ -366,9 +372,7 @@
           <div class="col mt-3 mt-sm-2 p-4">
             <div style="display: flex; align-items: center">
               <div style="background: #c2272d; height: 40px; width: 8px"></div>
-              <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
-                About Us
-              </h3>
+              <h3 class="m-0 ms-2">About Us</h3>
               <div class="m-0 ms-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -426,9 +430,7 @@
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
-          Academics
-        </h3>
+        <h3 class="m-0 ms-2">Academics</h3>
         <div class="m-0 ms-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -546,9 +548,7 @@
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
-          Here we stand
-        </h3>
+        <h3 class="m-0 ms-2">Here we stand</h3>
         <div class="m-0 ms-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -592,15 +592,15 @@
             <div>
               <div class="row mt-4">
                 <div class="col">
-                  <h4 style="color: #514288">9+</h4>
+                  <h3 style="color: #514288">20+</h3>
                   <p>Years Legacy of Learning</p>
                 </div>
                 <div class="col">
-                  <h4 style="color: #514288">122</h4>
+                  <h3 style="color: #514288">122</h3>
                   <p>Faculty of Expert Educators</p>
                 </div>
                 <div class="col">
-                  <h4 style="color: #514288">2776</h4>
+                  <h3 style="color: #514288">2776</h3>
                   <p>Bright Students</p>
                 </div>
               </div>
@@ -622,9 +622,7 @@
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
-          Facilities
-        </h3>
+        <h3 class="m-0 ms-2">Facilities</h3>
         <div class="m-0 ms-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -925,7 +923,7 @@
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
+        <h3 class="m-0 ms-2">
           A Message Of Vision: Building Tomorrow Together
         </h3>
         <div class="m-0 ms-2">
@@ -1068,9 +1066,7 @@
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
-          Building Bonds with Students and Parents
-        </h3>
+        <h3 class="m-0 ms-2">Building Bonds with Students and Parents</h3>
         <div class="m-0 ms-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1257,9 +1253,7 @@
     <div class="mx-3 my-4 m-md-5">
       <div style="display: flex; align-items: center">
         <div style="background: #c2272d; height: 40px; width: 8px"></div>
-        <h3 class="m-0 ms-2" style="font-size: 32px; font-weight: 700">
-          Celebrating Our Achievements
-        </h3>
+        <h3 class="m-0 ms-2">Celebrating Our Achievements</h3>
         <div class="m-0 ms-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
