@@ -15,12 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
     <style>
       .acadmicsCard:hover {
         box-shadow: 0 1rem 3rem #d2d2d2;
@@ -82,8 +76,15 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        let teachersCarousel = document.querySelector("#teachersCarousel");
+        var imageGrid = document.querySelector(".image-grid");
+        imagesLoaded(imageGrid, function () {
+          console.log("all images loaded");
+          var msnry = new Masonry(".image-grid", {
+            itemSelector: ".image-grid-item",
+          });
+        });
 
+        let teachersCarousel = document.querySelector("#teachersCarousel");
         if (window.matchMedia("(min-width: 768px)").matches) {
           let carousel = new bootstrap.Carousel(teachersCarousel, {
             interval: false,
@@ -427,105 +428,105 @@
         <h3 class="m-0 ms-2">Gallery</h3>
       </div>
       <div class="container-fluid mt-4">
-        <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="row image-grid" data-masonry='{"percentPosition": true }'>
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-1.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-2.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-3.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-4.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-5.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-6.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-7.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-8.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-9.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-10.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-11.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-12.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-13.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-14.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-15.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-16.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-17.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-18.jpeg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-19.jpeg"
             alt="kinderboost"
           />
 
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/p1/p1-20.jpeg"
             alt="kinderboost"
           />
@@ -1227,5 +1228,12 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </body>
 </html>
