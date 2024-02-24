@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kinderboost - Sahyadri National School</title>
     <link rel="icon" type="image/x-icon" href="./Assets/logo.ico" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-1.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-2.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-3.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-4.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-5.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-6.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-7.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-8.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-9.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-10.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-11.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-12.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-13.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-14.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-15.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-16.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-17.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-18.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-19.jpg" />
+    <link rel="preload" as="image" src="./Assets/kinderboost/kinder-20.jpg" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -73,8 +93,18 @@
         color: #fff;
       }
     </style>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        var imageGrid = document.querySelector(".image-grid");
+        imagesLoaded(imageGrid, function () {
+          console.log("all images loaded");
+          var msnry = new Masonry(".image-grid", {
+            itemSelector: ".image-grid-item",
+          });
+        });
+
         let teachersCarousel = document.querySelector("#teachersCarousel");
         if (window.matchMedia("(min-width: 768px)").matches) {
           let carousel = new bootstrap.Carousel(teachersCarousel, {
@@ -417,104 +447,104 @@
         <h3 class="m-0 ms-2">Gallery</h3>
       </div>
       <div class="container-fluid mt-4">
-        <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="row image-grid">
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-1.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-2.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-3.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-4.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-5.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-6.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-7.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-8.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-9.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-10.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-11.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-12.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-13.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-14.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-15.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-16.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-17.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-18.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-19.jpg"
             alt="kinderboost"
           />
           <img
-            class="col-sm-6 col-lg-4 mb-4"
+            class="col-sm-6 col-lg-4 mb-4 image-grid-item"
             src="./Assets/kinderboost/kinder-20.jpg"
             alt="kinderboost"
           />
@@ -971,6 +1001,5 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </body>
 </html>
