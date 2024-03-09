@@ -24,10 +24,10 @@
       .acadmicsCard:hover {
         box-shadow: 0 0.5rem 1rem #b0575a;
       }
-      .cardMaxThreeLines {
+      .cardMaxFourLines {
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
       }
       .sliderImage {
@@ -40,6 +40,21 @@
       .logo {
         width: 15vw;
         height: 10vw;
+      }
+      .reviewNameContainer {
+        width: 250px;
+        height: 250px;
+        border-radius: 125px;
+        background-color: #747373;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+      .reviewName {
+        padding: 0;
+        margin: 0;
+        color: #fff;
       }
       @media (min-width: 768px) {
         #parentReviewCarousel .carousel-inner {
@@ -81,6 +96,12 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        var popoverTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="popover"]')
+        );
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl);
+        });
         let parentReviewCarousel = document.querySelector(
           "#parentReviewCarousel"
         );
@@ -701,7 +722,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">Science lab</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       Science Laboratory at Sahyadri National School is well
                       equipped with all the necessary apparatus. It is
                       completely a safe place for students to carry out various
@@ -727,7 +748,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">Computer Lab</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       In this Era of Information Technology we have a well
                       equipped computer lab set up. Spacious laboratory with 35+
                       computers for students to work individually. With all
@@ -754,7 +775,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">Book Treasure</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       A spacious and dedicated place for children to nurture
                       their reading habits. It has variety of books for students
                       of Std 1 to 10 in English, Marathi and Hindi. A huge store
@@ -781,7 +802,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">E-learning</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       To create and facilitate learning experiences we have 40 +
                       classrooms equipped with digital boards.
                     </p>
@@ -805,7 +826,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">Activity hall</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       Multipurpose Halls We are proud to have has 4 spacious
                       multipurpose halls one on each floor for conducting
                       various activities,competitions and meetings.
@@ -830,7 +851,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">In House Couching</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       We at Sahyadri National School give lot of importance to
                       physical fitness for building a healthy citizen for our
                       Nation. Inhouse Coaching is given to the students after
@@ -858,7 +879,7 @@
                       style="height: 275px; width: 450px; border-radius: 20px"
                     />
                     <h3 class="mt-4 text-center">Sankul</h3>
-                    <p class="mt-3 text-center cardMaxThreeLines">
+                    <p class="mt-3 text-center cardMaxFourLines">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Numquam perspiciatis est enim neque alias inventore.
                     </p>
@@ -1136,9 +1157,9 @@
                     alt="review-1"
                     style="width: 250px; height: 250px; border-radius: 125px"
                   />
-                  <p class="text-center mt-4">
+                  <p class="text-center mt-4 cardMaxFourLines">
                     Name- Nehul Warule Education:- Mechanical Diploma Present
-                    day status - Artist |Actor | Reality Choreographer My School
+                    day status - Artist |Actor | Reality Choreographer My school
                     brought out the best version of myself by tapping into my
                     individual strengths, while creating an environment of
                     kindness.
@@ -1152,11 +1173,11 @@
                     alt="review-2"
                     style="width: 250px; height: 250px; border-radius: 125px"
                   />
-                  <p class="text-center mt-4">
+                  <p class="text-center mt-4 cardMaxFourLines">
                     My child Misbah Tahasildar is studying in Sahyadri National
                     School. The environment and activities conducted in this
                     school are always in student's interest. I can see marked
-                    difference in my daughter's peesonality, as this school
+                    difference in my daughter's personality, as this school
                     plays a major role in inculcating good values alongwith the
                     academics.The teachers are extremely caring and of friendly
                     nature.
@@ -1170,12 +1191,12 @@
                     alt="review-3"
                     style="width: 250px; height: 250px; border-radius: 125px"
                   />
-                  <p class="text-center mt-4">
+                  <p class="text-center mt-4 cardMaxFourLines">
                     Our experience at Sahyadri National School has been
                     exceptional. The teachers are truly invested and supportive.
                     The administration is open minded and always gives varied
-                    experiences through activities and competitions for students
-                    overall development.
+                    experiences through activities and competitions for
+                    students' overall development.
                   </p>
                 </div>
               </div>
@@ -1186,12 +1207,61 @@
                     alt="review-4"
                     style="width: 250px; height: 250px; border-radius: 125px"
                   />
-                  <p class="text-center mt-4">
+                  <p class="text-center mt-4 cardMaxFourLines">
                     Name - Aditya Ravindra Jadhav Education(pursuing) -
                     Electrical Engineering, B.Tech, IIT BHU The harmonious
                     integration of academic excellence, character development
                     and unforgettable experiences marked my journey at Sahyadri
                     National School.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <div class="reviewNameContainer">
+                    <h2 class="reviewName">PK</h2>
+                  </div>
+                  <p
+                    class="text-center mt-4 cardMaxFourLines"
+                    data-bs-toggle="popover"
+                    data-bs-trigger="hover"
+                    data-bs-content="This is Pradeep Khodanpure.My daughter,Tanvi Khodanpure has been studying in Kinderboost Preschool since Mini KG.Currenlty,She is in Jr KG Raspberry .The school maintains good communication with parents through monthly PTA and keeps them informed about their child's progress and the upcoming events.
+                    All the teachers here are well-qualified and experienced.They use a variety of activities such as storytelling, music,art, and play based  learning which help children to develop their cognitive, social, emotional,and physical skills. My daughter feels supported and valued and it shows in her confidence and academic growth.I am confident that the Strong foundation created by the school and teachers will definately take her a long way."
+                  >
+                    This is Pradeep Khodanpure. My daughter,Tanvi Khodanpure has
+                    been studying in Kinderboost Preschool since Mini
+                    KG.Currenlty,She is in Jr KG Raspberry. The school maintains
+                    good communication with parents through monthly PTA and
+                    keeps them informed about their child's progress and the
+                    upcoming events.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col d-flex flex-column align-items-center p-3">
+                  <img
+                    src="./Assets/review/review-5.jpeg"
+                    alt="review-5"
+                    style="width: 250px; height: 250px; border-radius: 125px"
+                  />
+                  <p
+                    class="text-center mt-4 cardMaxFourLines"
+                    data-bs-toggle="popover"
+                    data-bs-trigger="hover"
+                    data-bs-content="We are Supriya and Tushar Mankar, parents of Master. Tasmay Tushar Mankar.  As a parents we are happy to say that we are the part of this esteemed institution.  Our child is taking education in kinder boost preschool in Senior KG Orange class.  One important and beautiful thing that we feel that even when entering in a modern building we get a glimpse of Goddess Saraswati.  And this is what makes school so important.
+                    We like to take the privilege to congratulate the management of the school for its endless efforts.  We are really thankful of all teachers, management, office staff, kaka and mavshi of the school.  They really take good care of all the children.  You have become a part of the children's daily lives and for that we thank you.
+                     Very nicely planned and organized academic programs carried out by the school Management.The way you have implemented the programs throughout the academic year is commendable.  
+                    The manner in which the school celebrates our cultural events and festivals helps create affection for our culture in the minds of children.  
+                    The teaching method is really very good, the whole month plan which is given in the children’s diary is very helpful for us.  An utmost care is taken to improve the physical development of children’s by playing outdoor games."
+                  >
+                    We are Supriya and Tushar Mankar, parents of Master. Tasmay
+                    Tushar Mankar. As a parents we are happy to say that we are
+                    the part of this esteemed institution. Our child is taking
+                    education in kinder boost preschool in Senior KG Orange
+                    class. One important and beautiful thing that we feel that
+                    even when entering in a modern building we get a glimpse of
+                    Goddess Saraswati. And this is what makes school so
+                    important.
                   </p>
                 </div>
               </div>
@@ -1459,8 +1529,7 @@
           <div class="col col-sm-3">
             <img class="img-fluid" src="./Assets/ssdlogo.png" alt="logo" />
             <p class="text-white mt-3 pe-3">
-              Follow us on various social media platforms to stay updated with
-              the latest news & updates.
+              Follow us on social media platforms for latest news and updates
             </p>
             <div class="d-flex mt-3">
               <svg
