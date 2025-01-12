@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fee Structure - Sahyadri National School</title>
+    <title>Contact Us - Sahyadri National School</title>
     <link rel="icon" type="image/x-icon" href="./Assets/logo.ico" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -16,13 +16,53 @@
       rel="stylesheet"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "4ctdABOuUaLFQRtT2",
+        });
+      })();
+      function sendEmail() {
+        const name = document.getElementById("name").value;
+        const phoneNumber = document.getElementById("phone-number").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        emailjs
+          .send("default_service", "template_80vf869", {
+            name,
+            phoneNumber,
+            email,
+            message,
+          })
+          .then(
+            (response) => {
+              alert("Form Submitted Successfully!");
+              window.location.reload();
+            },
+            (error) => {
+              console.log("FAILED...", error);
+              window.location.reload();
+            }
+          );
+      }
+    </script>
     <style>
       .acadmicsCard:hover {
         box-shadow: 0 1rem 3rem #d2d2d2;
+      }
+      .info-container {
+        border: #c2272d solid 1px;
+        border-radius: 0px;
+        height: 450px;
+      }
+      .form-container {
+        border: #c2272d solid 1px;
+        border-radius: 0px;
+        height: 450px;
       }
       .sliderImage {
         width: 100%;
@@ -36,6 +76,16 @@
         height: 10vw;
       }
       @media (min-width: 768px) {
+        .info-container {
+          border: #c2272d solid 1px;
+          /* border-radius: 48px 0px 0px 48px; */
+          height: 450px;
+        }
+        .form-container {
+          border: #c2272d solid 1px;
+          /* border-radius: 0px 48px 48px 0px; */
+          height: 450px;
+        }
         .sliderImage {
           width: 100%;
           height: 540px;
@@ -148,7 +198,7 @@
                   class="nav-link"
                   aria-current="page"
                   href="./feeStructure.html"
-                  style="color: #c2272d"
+                  style="color: #1e1e1e"
                   >Fee Structure</a
                 >
               </li>
@@ -161,12 +211,12 @@
                   >Alumni</a
                 >
               </li>
-              <li class="nav-item"></li>
+              <li class="nav-item">
                 <a
                   class="nav-link"
                   aria-current="page"
                   href="./careers.html"
-                  style="color: #1e1e1e"
+                  style="color: #c2272d"
                   >Careers</a
                 >
               </li>
@@ -193,16 +243,81 @@
         </div>
       </nav>
     </header>
-    <div
-      class="container-fluid p-0 m-0 d-flex flex-column align-items-center justify-content-center my-4"
-    >
-      <img
-        src="./Assets/logo.png"
-        class="container-fluid p-0 mt-4"
-        style="width: 300px; height: 215px"
-      />
-      <h3 class="mt-3">SAHYADRI NATIONAL SCHOOL</h3>
-      <img src="./Assets/fee-structure.png" class="img-fluid p-0 mt-4" />
+    <div class="container-fluid p-0" style="max-height: 540px">
+      <img src="./Assets/we-are-hiring.jpg" class="sliderImage" />
+    </div>
+    <div class="mx-3 my-4 m-md-5">
+      <div style="display: flex; align-items: center">
+        <div style="background: #c2272d; height: 40px; width: 8px"></div>
+        <h3 class="m-0 ms-2">Careers</h3>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-md-2 m-1 mt-2 align-items-center mb-5"
+      >
+        <div
+          class="col mt-4 mt-sm-2 d-flex flex-column align-items-center justify-content-center info-container"
+        >
+          <h4>We are hiring!</h4>
+          <p style="width: 70%" class="mt-4">
+            Sahyadri National School is looking for qualified, trained, and
+            experienced coordinators, teachers (PP, Std I to X) for all
+            subjects, and an office assistant. Attractive salary offered to
+            deserving candidates.
+          </p>
+        </div>
+        <div
+          class="col mt-4 mt-sm-2 d-flex flex-column align-items-center justify-content-center form-container"
+        >
+          <h4>Submit your application</h4>
+          <input
+            id="name"
+            class="form-control"
+            type="text"
+            placeholder="Name"
+            style="border-radius: 10px; max-width: 487px; margin-top: 20px"
+          />
+          <input
+            id="email"
+            class="form-control"
+            type="email"
+            placeholder="Email ID"
+            style="border-radius: 10px; max-width: 487px; margin-top: 20px"
+          />
+          <input
+            id="phone-number"
+            class="form-control"
+            type="tel"
+            placeholder="Mobile Number"
+            style="border-radius: 10px; max-width: 487px; margin-top: 20px"
+          />
+          <input
+            id="message"
+            class="form-control"
+            type="text"
+            placeholder="Professional Summary"
+            style="
+              border-radius: 10px;
+              max-width: 487px;
+              margin-top: 20px;
+              height: 87px;
+            "
+          />
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="
+              height: 48px;
+              width: 204px;
+              background-color: #514288;
+              border-radius: 24px;
+              margin-top: 30px;
+            "
+            onclick="sendEmail()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
     </div>
     <div style="background-color: #4c4c4c">
       <div class="container-fluid align-items-center">
@@ -387,5 +502,10 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
