@@ -1,15 +1,19 @@
 Git update steps -
-
-Step 1 - 
-git add .
+Step 1 -
+git pull origin main
 
 Step 2 - 
-git commit -m "changes"
+git add .
 
 Step 3 - 
+git commit -m "changes"
+
+Step 4 - 
 git push
 
+//git pull origin main
 
-Run this command for deployment
+//Run this command for deployment
     
-    node_modules/.bin/firebase deploy --only hosting 
+    //node_modules/.bin/firebase deploy --only hosting 
+    
